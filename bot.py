@@ -154,7 +154,7 @@ async def start(bot, cmd):
 		try:
 			file_id = int(usr_cmd)
 			send_stored_file = await bot.copy_message(chat_id=cmd.from_user.id, from_chat_id=DB_CHANNEL, message_id=file_id)
-			await send_stored_file.reply_text(f"**Join @Kannada_HD_FilmsRequest!__", disable_web_page_preview=True, quote=True)
+			await send_stored_file.reply_text(f"**Thanks For Using Me!__", disable_web_page_preview=True, quote=True)
 		except Exception as err:
 			await cmd.reply_text(f"Something went wrong!\n\n**Error:** `{err}`")
 
@@ -171,7 +171,7 @@ async def main(bot, message):
 				f"**Your File Stored in my Database!**\n\nHere is the Permanent Link of your file: {share_link} \n\nJust Click the link to get your file!",
 				parse_mode="Markdown",
 				reply_markup=InlineKeyboardMarkup(
-					[[InlineKeyboardButton("Open Link", url=share_link)], [InlineKeyboardButton("Bots Channel", url="https://t.me/Kannada_Film_HD"), InlineKeyboardButton("Support Group", url="https://t.me/Kannada_HD_FilmsRequest")]]
+					[[InlineKeyboardButton("Support Group", url="https://t.me/Kannada_HD_FilmsRequest")]]
 				),
 				disable_web_page_preview=True
 			)
